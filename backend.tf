@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "your-actual-bucket-name-here"
+    bucket = "jenkins-terraform-state-bucket-2025"
     key = "main"
-    region = "us-east-2"  # Match your region
-    dynamodb_table = "your-actual-dynamodb-table-name"
+    region = "us-east-2"
+    dynamodb_table = "terraform-state-lock-table"
   }
 }
